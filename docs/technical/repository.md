@@ -166,7 +166,6 @@ users, err := repo.
 
 ## Optimisations
 
-* Cache des métadonnées
 * Réutilisation des requêtes préparées
 * Batch operations pour les collections
 * Détection intelligente des hooks

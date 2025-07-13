@@ -69,13 +69,6 @@ type Column struct {
 * `orm:"not null"` : Contrainte
 * `orm:"default:value"` : Valeur par défaut
 
-## Cache des métadonnées
-
-* Utilisation de `sync.Map`
-* Clé = `reflect.Type`
-* Valeur = `*Metadata`
-* Thread-safe par design
-
 ## Relations
 
 * One-to-One : Champ unique
@@ -92,7 +85,6 @@ type Column struct {
 
 ## Performance
 
-* Cache des métadonnées
 * Réutilisation des types reflect
 * Analyse unique par type
 * Validation à la compilation si possible
