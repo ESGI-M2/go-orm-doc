@@ -17,15 +17,17 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://your-docusaurus-site.example.com',
-  baseUrl: '/',
+  url: 'https://github.com',
+  baseUrl: '/docs/intro/',
 
   organizationName: 'ESGI-M2',
-  projectName: 'GO-ORM',
+  projectName: 'go-orm-doc',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   onBrokenAnchors: 'ignore', // Les liens fonctionnent correctement malgré les avertissements
+
+  deploymentBranch: 'gh-pages',
 
   i18n: {
     defaultLocale: 'fr',
