@@ -1,6 +1,6 @@
 # Plan de la documentation « Bibliothèque »
 
-> Cette section décrit la structure et le contenu prévus pour la documentation d’utilisation de GO ORM. Chaque point correspond à **une page Docusaurus distincte** afin d’assurer une navigation claire via le sommaire.
+> Cette section décrit la structure et le contenu prévus pour la documentation d'utilisation de GO ORM. Chaque point correspond à **une page Docusaurus distincte** afin d'assurer une navigation claire via le sommaire.
 
 ## Sommaire proposé
 
@@ -10,14 +10,14 @@
 2. **Installation**
    * Pré-requis.
    * `go get` + configuration.
-   * Chargement des variables d’environnement.
+   * Chargement des variables d'environnement.
 3. **Configuration & Connexion**
    * `ConfigBuilder` pas-à-pas.
    * Connexion SimpleORM vs AdvancedORM.
-   * Auto-création de base, pooling, logs, cache global.
+   * Auto-création de base, pooling.
    * Exemples de code complets.
 4. **Modèles & Métadonnées**
-   * Définition d’un modèle.
+   * Définition d'un modèle.
    * Tags `orm:"..."` (table, colonne, pk, auto, softDelete…).
    * Gestion des relations dans le modèle.
 5. **Repository (CRUD)**
@@ -30,7 +30,6 @@
    * Query basique (Select, Where, Join, GroupBy, OrderBy…).
    * Query avancée (SubQuery, With, Union, ForUpdate…).
    * Pagination offset / cursor.
-   * Cache par requête.
 7. **Transactions**
    * Début, commit, rollback.
    * Transactions imbriquées & contexte.
@@ -40,16 +39,12 @@
 9. **Migrations & Schéma**
    * `CreateTable`, `Migrate`, `DropTable`.
    * Détection & helpers de dialecte.
-10. **Pagination & Cache**
-    * Utilisation du cache global vs local.
-    * Invalidations automatiques.
-11. **Journalisation & Monitoring**
-    * Activer les logs.
-    * Lecture des logs via `GetQueryLog`.
-12. **Gestion des erreurs**
-    * Types d’erreurs fournies.
+10. **Pagination**
+    * Utilisation de la pagination offset et cursor.
+11. **Gestion des erreurs**
+    * Types d'erreurs fournies.
     * Bonnes pratiques de handling.
-13. **Recettes & Exemples complets**
+12. **Recettes & Exemples complets**
     * CRUD complet.
     * Authentification simplifiée.
     * Reporting/statistiques.

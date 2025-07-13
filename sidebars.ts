@@ -21,7 +21,6 @@ const sidebars: SidebarsConfig = {
         'library/repository',
         'library/query-builder',
         'library/transactions',
-        'library/logging',
         'library/pagination',
         'library/builder-pattern',
         'library/examples'
@@ -36,9 +35,7 @@ const sidebars: SidebarsConfig = {
         'technical/metadata',
         'technical/repository',
         'technical/query-builder',
-        'technical/transaction',
-        'technical/logging',
-        'technical/cache'
+        'technical/transaction'
       ]
     },
     {

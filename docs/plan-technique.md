@@ -20,10 +20,9 @@
    * Validation et valeurs par défaut.
 5. **ORM (Simple & Advanced)**
    * Composition avec la Connexion.
-   * Stratégie d’injection (dialecte, cache, log).
+   * Stratégie d'injection (dialecte).
 6. **Métadonnées & Réflexion**
    * Package `metadata`.
-   * Cache interne (map type → metadata).
    * Parsing des tags `orm:"..."`.
    * Gestion des relations.
 7. **Repository**
@@ -41,20 +40,13 @@
     * Interface `Transaction`.
     * Gestion de contexte.
     * Savepoints / imbrication (Mock dialect).
-11. **Cache**
-    * Interface `Cache`.
-    * Implémentation mémoire de base (map + TTL).
-    * Points d’invalidation.
-12. **Pagination**
+11. **Pagination**
     * Implémentation offset vs cursor.
     * Calcul `nextCursor`.
-13. **Logging & Monitoring**
-    * Interface `QueryLogger`.
-    * Hook dans Query Builder / Repository.
-14. **Gestion des erreurs**
-    * Types d’erreur dédiés.
+12. **Gestion des erreurs**
+    * Types d'erreur dédiés.
     * Stratégie de wrapping (`fmt.Errorf("%w"...)`).
-15. **Helpers**
+13. **Helpers**
     * `factory` (dialects), `dialect_helpers`, `pretty`.
 
 ## Conventions

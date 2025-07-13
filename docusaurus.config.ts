@@ -17,8 +17,8 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://github.com',
-  baseUrl: '/docs/intro/',
+  url: 'https://esgi-m2.github.io',
+  baseUrl: '/go-orm-doc/',
 
   organizationName: 'ESGI-M2',
   projectName: 'go-orm-doc',
