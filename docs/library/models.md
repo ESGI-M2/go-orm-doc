@@ -44,11 +44,7 @@ type Post struct {
 
 ## Système de Tags
 
-Support de deux systèmes de tags :
-
-### Nouveau Système
-
-Tag `orm` avec syntaxe concise :
+Support du système de tags ORM avec syntaxe concise :
 
 ```go
 type User struct {
@@ -61,24 +57,9 @@ type User struct {
 }
 ```
 
-### Ancien Système
-
-Tags séparés pour chaque propriété :
-
-```go
-type User struct {
-    ID       int    `db:"id" primary:"true" autoincrement:"true"`
-    Name     string `db:"name" index:"true"`
-    Email    string `db:"email" unique:"true"`
-    Age      int    `db:"age" default:"18"`
-    IsActive bool   `db:"is_active" default:"true"`
-    Created  string `db:"created_at"`
-}
-```
-
 ## Référence des Tags
 
-### Tags Nouveau Système (`orm`)
+### Tags ORM
 
 | Tag | Description | Exemple |
 |-----|-------------|---------|
@@ -91,19 +72,6 @@ type User struct {
 | `length:n` | Longueur du champ | `orm:"length:255"` |
 | `default:value` | Valeur par défaut | `orm:"default:true"` |
 | `fk:table.column` | Clé étrangère | `orm:"fk:users.id"` |
-
-### Tags Ancien Système
-
-| Tag | Description | Exemple |
-|-----|-------------|---------|
-| `db` | Nom de la colonne | `db:"user_name"` |
-| `primary` | Clé primaire | `primary:"true"` |
-| `autoincrement` | Auto-incrément | `autoincrement:"true"` |
-| `unique` | Contrainte unique | `unique:"true"` |
-| `index` | Créer un index | `index:"true"` |
-| `foreign` | Clé étrangère | `foreign:"users.id"` |
-| `length` | Longueur du champ | `length:"255"` |
-| `default` | Valeur par défaut | `default:"18"` |
 
 ## Exemples Pratiques
 
@@ -125,17 +93,6 @@ type User struct {
     CreatedAt time.Time `orm:"column:created_at"`
     UpdatedAt time.Time `orm:"column:updated_at"`
 }
-
-// Avec l'ancien système
-type UserLegacy struct {
-    ID        int       `db:"id" primary:"true" autoincrement:"true"`
-    Name      string    `db:"name" index:"true" length:"100"`
-    Email     string    `db:"email" unique:"true" length:"255"`
-    Age       int       `db:"age" default:"18"`
-    IsActive  bool      `db:"is_active" default:"true"`
-    CreatedAt time.Time `db:"created_at"`
-    UpdatedAt time.Time `db:"updated_at"`
-}
 ```
 
 ### Modèle avec Relations
@@ -154,17 +111,6 @@ type Product struct {
     CategoryID  int     `orm:"fk:categories.id"`
     IsActive    bool    `orm:"default:true"`
     CreatedAt   time.Time `orm:"column:created_at"`
-}
-
-// Avec l'ancien système
-type ProductLegacy struct {
-    ID          int     `db:"id" primary:"true" autoincrement:"true"`
-    Name        string  `db:"name" index:"true" length:"255"`
-    Description string  `db:"description"`
-    Price       float64 `db:"price" default:"0.00"`
-    CategoryID  int     `db:"category_id" foreign:"categories.id"`
-    IsActive    bool    `db:"is_active" default:"true"`
-    CreatedAt   time.Time `db:"created_at"`
 }
 ```
 
@@ -212,13 +158,6 @@ type Profile struct {
     ID     int    `orm:"pk,auto"`
     UserID int    `orm:"fk:users.id"`
     Bio    string `orm:"nullable"`
-}
-
-// Avec l'ancien système
-type ProfileLegacy struct {
-    ID     int    `db:"id" primary:"true" autoincrement:"true"`
-    UserID int    `db:"user_id" foreign:"users.id"`
-    Bio    string `db:"bio"`
 }
 ```
 
