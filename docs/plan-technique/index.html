@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.8.1">
 <title data-rh="true">Plan de la documentation « Technique » | GO ORM Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://esgi-m2.github.io/go-orm-doc/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://esgi-m2.github.io/go-orm-doc/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://esgi-m2.github.io/go-orm-doc/docs/plan-technique"><meta data-rh="true" property="og:locale" content="fr"><meta data-rh="true" name="docusaurus_locale" content="fr"><meta data-rh="true" name="docsearch:language" content="fr"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Plan de la documentation « Technique » | GO ORM Documentation"><meta data-rh="true" name="description" content="Cette section explique comment chaque fonctionnalité de GO ORM est implémentée en Go : conception, structures de données, algorithmes, limites, choix techniques. Chaque élément du sommaire correspond à une page distincte et fait écho à la page utilisateur."><meta data-rh="true" property="og:description" content="Cette section explique comment chaque fonctionnalité de GO ORM est implémentée en Go : conception, structures de données, algorithmes, limites, choix techniques. Chaque élément du sommaire correspond à une page distincte et fait écho à la page utilisateur."><link data-rh="true" rel="icon" href="/go-orm-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://esgi-m2.github.io/go-orm-doc/docs/plan-technique"><link data-rh="true" rel="alternate" href="https://esgi-m2.github.io/go-orm-doc/docs/plan-technique" hreflang="fr"><link data-rh="true" rel="alternate" href="https://esgi-m2.github.io/go-orm-doc/docs/plan-technique" hreflang="x-default"><link rel="stylesheet" href="/go-orm-doc/assets/css/styles.79f16f35.css">
-<script src="/go-orm-doc/assets/js/runtime~main.75151377.js" defer="defer"></script>
-<script src="/go-orm-doc/assets/js/main.852cab00.js" defer="defer"></script>
+<script src="/go-orm-doc/assets/js/runtime~main.cdf65a89.js" defer="defer"></script>
+<script src="/go-orm-doc/assets/js/main.4311bef1.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -46,13 +46,12 @@
 <li><strong>ORM (Simple &amp; Advanced)</strong>
 <ul>
 <li>Composition avec la Connexion.</li>
-<li>Stratégie d’injection (dialecte, cache, log).</li>
+<li>Stratégie d&#x27;injection (dialecte).</li>
 </ul>
 </li>
 <li><strong>Métadonnées &amp; Réflexion</strong>
 <ul>
 <li>Package <code>metadata</code>.</li>
-<li>Cache interne (map type → metadata).</li>
 <li>Parsing des tags <code>orm:&quot;...&quot;</code>.</li>
 <li>Gestion des relations.</li>
 </ul>
@@ -84,28 +83,15 @@
 <li>Savepoints / imbrication (Mock dialect).</li>
 </ul>
 </li>
-<li><strong>Cache</strong>
-<ul>
-<li>Interface <code>Cache</code>.</li>
-<li>Implémentation mémoire de base (map + TTL).</li>
-<li>Points d’invalidation.</li>
-</ul>
-</li>
 <li><strong>Pagination</strong>
 <ul>
 <li>Implémentation offset vs cursor.</li>
 <li>Calcul <code>nextCursor</code>.</li>
 </ul>
 </li>
-<li><strong>Logging &amp; Monitoring</strong>
-<ul>
-<li>Interface <code>QueryLogger</code>.</li>
-<li>Hook dans Query Builder / Repository.</li>
-</ul>
-</li>
 <li><strong>Gestion des erreurs</strong>
 <ul>
-<li>Types d’erreur dédiés.</li>
+<li>Types d&#x27;erreur dédiés.</li>
 <li>Stratégie de wrapping (<code>fmt.Errorf(&quot;%w&quot;...)</code>).</li>
 </ul>
 </li>
