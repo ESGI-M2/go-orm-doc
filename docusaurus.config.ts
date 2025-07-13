@@ -17,11 +17,11 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://esgi-m2.github.io',
-  baseUrl: '/',
+  url: 'https://github.com',
+  baseUrl: '/docs/intro/',
 
   organizationName: 'ESGI-M2',
-  projectName: 'ESGI-M2.github.io',
+  projectName: 'go-orm-doc',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
